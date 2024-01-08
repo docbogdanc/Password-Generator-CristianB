@@ -139,21 +139,22 @@ console.log("the array with user choices: "+finalPasswordChoices); // the result
 function createArrayChosenChar() {
   var allChosenCharacters = []
   if (finalPasswordChoices[1] ===true) {
-    allChosenCharacters = allChosenCharacters+specialCharacters;
-  } else {console.log("Special cahracters are omitted from password");}
+    allChosenCharacters=allChosenCharacters.concat(specialCharacters);
+  } else {console.log("Special characters are omitted from password");}
   if (finalPasswordChoices[2] ===true) {
-    allChosenCharacters = allChosenCharacters+numericCharacters;
-  } else {console.log("Numeric cahracters are omitted from password");}
+    allChosenCharacters=allChosenCharacters.concat(numericCharacters);
+  } else {console.log("Numeric characters are omitted from password");}
   if (finalPasswordChoices[3] ===true) {
-    allChosenCharacters = allChosenCharacters+lowerCasedCharacters;
-  } else {console.log("Lower case cahracters are omitted from password");}
+    allChosenCharacters=allChosenCharacters.concat(lowerCasedCharacters);
+  } else {console.log("Lower case chhracters are omitted from password");}
   if (finalPasswordChoices[4] ===true) {
-    allChosenCharacters = allChosenCharacters+upperCasedCharacters;
-  } else {console.log("Upper case cahracters are omitted from password");}
+    allChosenCharacters=allChosenCharacters.concat(upperCasedCharacters);
+  } else {console.log("Upper case characters are omitted from password");}
   return allChosenCharacters
 }
 
 var finalArrayWithChar = createArrayChosenChar();
+// finalArrayWithChar = finalArrayWithChar.join('')  //convert array to a single string of characters
 console.log(finalArrayWithChar);
 console.log("length of password: "+finalPasswordChoices[0]);
 
@@ -161,9 +162,11 @@ var generatedPassword = [];
 // Function for getting a random element from an array , and creating the password
 function getRandom(arr) {
   for (i=0 ; i<=finalPasswordChoices[0]; i++) {
-    var index = Math.floor(Math.random()*arr.length);
-    console.log(index);
-    var passwordElement = arr[index];
+    console.log(arr);
+    console.log("array length is "+arr.length);
+    var randomIndex = Math.floor(Math.random()*arr.length);
+    console.log(randomIndex);
+    var passwordElement = arr[randomIndex];
     console.log(passwordElement);
     generatedPassword.push(passwordElement);
     console.log(generatedPassword);
