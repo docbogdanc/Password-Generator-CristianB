@@ -155,14 +155,18 @@ function createArrayChosenChar() {
 
 var finalArrayWithChar = createArrayChosenChar();
 console.log(finalArrayWithChar);
+console.log("length of password: "+finalPasswordChoices[0]);
 
 var generatedPassword = [];
 // Function for getting a random element from an array , and creating the password
 function getRandom(arr) {
-  for (i=8 ; i<=finalPasswordChoices[0]; i++) {
-    Index = Math.floor(Math.random*arr.length);
-    generatedPassword = generatedPassword + arr[Index];
+  for (i=0 ; i<=finalPasswordChoices[0]; i++) {
+    var index = Math.floor(Math.random()*arr.length);
     console.log(index);
+    var passwordElement = arr[index];
+    console.log(passwordElement);
+    generatedPassword.push(passwordElement);
+    console.log(generatedPassword);
   }
   return generatedPassword
 }
@@ -177,7 +181,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  // var password = generatePassword();
+  var password = passwordFinal
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
