@@ -12,13 +12,13 @@ It tests the knowledge gained fin the bootcamp , especially the implementation o
 
 
 
-![image of results](./images/Screenshot.png)
+![image of results](./images/screenshot.png)
 
 
 
 ## Installation
 
-The repository is on public domain ..... and the deployed webpage can be found at ..... where it was deployed using GitHub 
+The repository is on the GitHub repositories public domain https://github.com/docbogdanc/Password-Generator-CristianB.git and the deployed webpage can be found at https://docbogdanc.github.io/Password-Generator-CristianB/ where it was deployed using GitHub 
 
 
 ## Usage

@@ -102,7 +102,7 @@ function getPasswordOptions() {
         "The password should have between 8 and 128 characters, and at least one of the character types. How many characters should the password have?"
       )
     );
-    console.log("The password is " + lengthPassword + " characters long");
+    console.log("The password will be " + lengthPassword + " characters long");
     // check if the length of the password is correct ; if yes, add the value to "passwordChoice" array
     if (lengthPassword >= 8 && lengthPassword <= 128) {
       passwordChoices.push(lengthPassword);
@@ -137,7 +137,7 @@ function getPasswordOptions() {
 
 // call the function and store the result ;  the result is an array like [length, true, true, true, false]
 var finalPasswordChoices = getPasswordOptions();
-console.log("the array with user choices: " + finalPasswordChoices);
+console.log("The array with user choices: " + finalPasswordChoices);
 
 // Function to create an array of characters corespunding to the array above
 function createArrayChosenChar() {
@@ -174,17 +174,14 @@ var generatedPassword = [];
 // Function for getting a random element from an array , and creating the password
 function getRandom(arr) {
   for (i = 0; i <= finalPasswordChoices[0]; i++) {
-    console.log(arr);
-    console.log("array length is " + arr.length);
     var randomIndex = Math.floor(Math.random() * arr.length);
-    console.log(randomIndex);
     var passwordElement = arr[randomIndex];
-    console.log(passwordElement);
     generatedPassword.push(passwordElement);
-    console.log(generatedPassword);
   }
   return generatedPassword;
 }
+
+// call function to generate the random characters
 var passwordFinal = getRandom(finalArrayWithChar);
 console.log(passwordFinal);
 
@@ -196,7 +193,6 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  // var password = generatePassword();
   var password = passwordFinal.join("");
   var passwordText = document.querySelector("#password");
 
