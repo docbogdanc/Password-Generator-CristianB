@@ -8,7 +8,7 @@ Password genarator tool - part of Bootcamp challenge
 
 This Project was created for bootcamp challenge.
 
-It tests the knowledge gained fin the bootcamp , especially the implementation of javascript. It begin with a starter code provided by the bootcamp and it is now at the level of generating a password according to user choice of character types, to demonstrate the knowledge gained in Javascript.
+It tests the knowledge gained during the bootcamp course, especially the implementation of javascript. It began with a starter code provided by the bootcamp and it is now at the level of generating a password according to user choice's character types. It demonstrate the knowledge gained in Intermediate Javascript course.
 
 
 
@@ -34,16 +34,15 @@ The code is free to be used according to the licence condition (please see the l
   
 
 
-- w3schools.com from where the information was used to understand the syntax for:
-    - Format a Number with Two Decimals 
+- Xpert Learning Assistant - the Bootcamp Course AI, used for helping with some of the javascript syntax
  
-   https://www.w3schools.com/
+         https://bootcampspot.instructure.com/courses
 
 
 
 - Markdown Guide used for styling the readme.md
 
-   https://www.markdownguide.org/basic-syntax/
+         https://www.markdownguide.org/basic-syntax/
 
 
 ## License
