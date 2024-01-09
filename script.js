@@ -102,7 +102,7 @@ function getPasswordOptions() {
         "The password should have between 8 and 128 characters, and at least one of the character types. How many characters should the password have?"
       )
     );
-    console.log("The password will be " + lengthPassword + " characters long");
+   
     // check if the length of the password is correct ; if yes, add the value to "passwordChoice" array
     if (lengthPassword >= 8 && lengthPassword <= 128) {
       passwordChoices.push(lengthPassword);
@@ -137,7 +137,6 @@ function getPasswordOptions() {
 
 // call the function and store the result ;  the result is an array like [length, true, true, true, false]
 var finalPasswordChoices = getPasswordOptions();
-console.log("The array with user choices: " + finalPasswordChoices);
 
 // Function to create an array of characters corespunding to the array above
 function createArrayChosenChar() {
@@ -145,22 +144,22 @@ function createArrayChosenChar() {
   if (finalPasswordChoices[1] === true) {
     allChosenCharacters = allChosenCharacters.concat(specialCharacters);
   } else {
-    console.log("Special characters are omitted from password");
+    // console.log("Special characters are omitted from password");
   }
   if (finalPasswordChoices[2] === true) {
     allChosenCharacters = allChosenCharacters.concat(numericCharacters);
   } else {
-    console.log("Numeric characters are omitted from password");
+    // console.log("Numeric characters are omitted from password");
   }
   if (finalPasswordChoices[3] === true) {
     allChosenCharacters = allChosenCharacters.concat(lowerCasedCharacters);
   } else {
-    console.log("Lower case chhracters are omitted from password");
+    // console.log("Lower case chhracters are omitted from password");
   }
   if (finalPasswordChoices[4] === true) {
     allChosenCharacters = allChosenCharacters.concat(upperCasedCharacters);
   } else {
-    console.log("Upper case characters are omitted from password");
+    // console.log("Upper case characters are omitted from password");
   }
   return allChosenCharacters;
 }
@@ -168,7 +167,6 @@ function createArrayChosenChar() {
 // call the function and store the result ; the results is an array of separated characters
 var finalArrayWithChar = createArrayChosenChar();
 finalArrayWithChar = finalArrayWithChar.join('')  //convert the array to a single string of characters
-console.log(finalArrayWithChar);
 
 var generatedPassword = [];
 // Function for getting a random element from an array , and creating the password
@@ -183,7 +181,6 @@ function getRandom(arr) {
 
 // call function to generate the random characters
 var passwordFinal = getRandom(finalArrayWithChar);
-console.log(passwordFinal);
 
 // Function to generate password with user input
 function generatePassword() {}
